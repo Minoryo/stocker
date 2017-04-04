@@ -1,6 +1,21 @@
 <h1>商品登録</h1>
-<%= form_tag("/products/regist") do %>
-   <%= label_tag(:name, "商品名") %>
-   <%= text_field_tag(:name) %>
-   <%= submit_tag("登録") %>
+<%= form_for @product, url: products_regist_path do |f| %>
+   <div class="field">
+    <%= f.label :name, "商品名" %>
+    <%= f.text_field :name %>
+   </div>
+
+   <div class="field">
+    <%= f.label :price, "値段" %>
+    <%= f.number_field :price %>
+   </div>
+
+   <div class="field">
+     <%= f.label :quantity, "商品数" %>
+     <%= f.number_field :quantity %>
+   </div>
+
+   <div class="actions">
+    <%= f.submit "登録する" %>
+   </div>
 <% end %>
