@@ -1,2 +1,6 @@
-<h1>Products#new</h1>
-<p>Find me in app/views/products/new.html.erb</p>
+<h1>商品登録</h1>
+<%= form_tag("/products/regist") do %>
+   <%= label_tag(:name, "商品名") %>
+   <%= text_field_tag(:name) %>
+   <%= submit_tag("登録") %>
+<% end %>
