@@ -925,3 +925,78 @@ Processing by ProductsController#regist as HTML
 Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2017-04-05 21:58:03 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (72.3ms)
+Completed 200 OK in 2204ms (Views: 2142.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/new" for ::1 at 2017-04-05 21:58:37 +0900
+Processing by ProductsController#new as HTML
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/new.html.erb within layouts/application (237.2ms)
+Completed 200 OK in 510ms (Views: 454.9ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/products/regist" for ::1 at 2017-04-05 22:01:00 +0900
+Processing by ProductsController#regist as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"97EXPpzuJsQGavMZkck8dXSjJ4S/zbXbssqPLuZhNQgYgogDWNB3m1pI7ocemiMcwQ/F4tT+YCrxiDbXABE9jQ==", "product"=>{"name"=>"ボール", "price"=>"1000", "quantity"=>""}, "commit"=>"登録する"}
+  Rendering html template
+  Rendered html template (0.0ms)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for ::1 at 2017-04-05 22:10:07 +0900
+  
+SyntaxError (C:/Users/mino/Documents/Project/stocker/app/controllers/products_controller.rb:16: syntax error, unexpected tIVAR, expecting keyword_end
+    render :html @product
+                         ^):
+  
+app/controllers/products_controller.rb:16: syntax error, unexpected tIVAR, expecting keyword_end
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1845.7ms)
+Started GET "/products" for ::1 at 2017-04-05 22:10:27 +0900
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 377ms (Views: 315.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/new" for ::1 at 2017-04-05 22:10:29 +0900
+Processing by ProductsController#new as HTML
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 195ms (Views: 119.6ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/products/regist" for ::1 at 2017-04-05 22:10:31 +0900
+Processing by ProductsController#regist as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3I5qPvUoJEs9pQBvoLJ8iLNlZ7+tYeNnHt4aSfT2d0IzvfUDMRZ1FGGHHfEv4WPhBsmF2cZSNpZdnKOwEoZ/xw==", "product"=>{"name"=>"あああ", "price"=>"", "quantity"=>""}, "commit"=>"登録する"}
+  Rendering html template
+  Rendered html template (0.0ms)
+Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/new" for ::1 at 2017-04-05 22:18:14 +0900
+Processing by ProductsController#new as HTML
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 180ms (Views: 144.8ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/products/regist" for ::1 at 2017-04-05 22:18:17 +0900
+Processing by ProductsController#regist as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CwsJwfw/o56hYRjyVJCpnjdaOVj3ClMfh9+3TZJOSk3465Hwk2c5zQNpYhnR6QJINdf3NBEKTLHqurSEsllJwg==", "product"=>{"name"=>"あ", "price"=>"", "quantity"=>""}, "commit"=>"登録する"}
+  Rendering html template
+  Rendered html template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+
+
