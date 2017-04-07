@@ -8,6 +8,9 @@
      <td><%= product.name %></td>
      <td><%= product.price %></td>
      <td><%= product.quantity %></td>
+     <td><%= link_to "確認", product %></td>
+     <td><%= link_to "削除", product, method: :delete,
+     data: { confirm: '本当に削除しますか？'} %></td>
     </tr>
   <% end %>
 </table>

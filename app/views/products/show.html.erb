@@ -1,2 +1,6 @@
-<h1>Products#show</h1>
-<p>Find me in app/views/products/show.html.erb</p>
+<h1>商品詳細ページ</h1>
+<p>商品名:<%= @product.name %></p>
+<p>値段:<%= "#{@product.price}円" %></p>
+<p>在庫数:<%= "#{@product.quantity}個" %></p>
+<p>登録日時: <%= @product.created_at.strftime("%Y/%m/%d\t%H:%M") %></p>
+<%= link_to "商品一覧へ", products_path %>
