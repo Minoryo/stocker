@@ -1,5 +1,5 @@
 <h1>商品登録</h1>
-<%= form_for @product, url: products_regist_path do |f| %>
+<%= form_for @product do |f| %>
    <div class="field">
     <%= f.label :name, "商品名" %>
     <%= f.text_field :name %>
@@ -11,7 +11,7 @@
    </div>
 
    <div class="field">
-     <%= f.label :quantity, "商品数" %>
+     <%= f.label :quantity, "在庫数" %>
      <%= f.number_field :quantity %>
    </div>
 
