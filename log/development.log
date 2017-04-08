@@ -2316,3 +2316,770 @@ Processing by ProductsController#index as HTML
 Completed 200 OK in 152ms (Views: 120.5ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/products" for ::1 at 2017-04-08 11:18:29 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (51.2ms)
+Completed 200 OK in 1209ms (Views: 1144.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for ::1 at 2017-04-08 11:20:09 +0900
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (317.7ms)
+Completed 500 Internal Server Error in 442ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `edit_product' for #<#<Class:0x517a628>:0x5b663b0>
+Did you mean?  edit_product_url):
+     9:      <td><%= product.price %></td>
+    10:      <td><%= product.quantity %></td>
+    11:      <td><%= link_to "確認", product %></td>
+    12:      <td><%= link_to "編集", edit_product %></td>
+    13:      <td><%= link_to "削除", product, method: :delete,
+    14:      data: { confirm: '本当に削除しますか？'} %></td>
+    15:     </tr>
+  
+app/views/products/index.html.erb:12:in `block in _app_views_products_index_html_erb___898343306_47933484'
+app/views/products/index.html.erb:6:in `_app_views_products_index_html_erb___898343306_47933484'
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (1838.2ms)
+Started GET "/products" for ::1 at 2017-04-08 11:20:25 +0900
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (30.1ms)
+Completed 500 Internal Server Error in 137ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"products"} missing required keys: [:id]):
+     9:      <td><%= product.price %></td>
+    10:      <td><%= product.quantity %></td>
+    11:      <td><%= link_to "確認", product %></td>
+    12:      <td><%= link_to "編集", edit_product_path %></td>
+    13:      <td><%= link_to "削除", product, method: :delete,
+    14:      data: { confirm: '本当に削除しますか？'} %></td>
+    15:     </tr>
+  
+app/views/products/index.html.erb:12:in `block in _app_views_products_index_html_erb___898343306_88403304'
+app/views/products/index.html.erb:6:in `_app_views_products_index_html_erb___898343306_88403304'
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (1990.8ms)
+Started GET "/products" for ::1 at 2017-04-08 11:24:44 +0900
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 176ms (Views: 147.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/1/edit" for ::1 at 2017-04-08 11:24:46 +0900
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (184.3ms)
+  Rendered products/edit.html.erb within layouts/application (216.4ms)
+Completed 200 OK in 444ms (Views: 359.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/products/1/edit" for ::1 at 2017-04-08 11:24:58 +0900
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (1.0ms)
+  Rendered products/edit.html.erb within layouts/application (28.1ms)
+Completed 200 OK in 179ms (Views: 148.6ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/products/1" for ::1 at 2017-04-08 11:25:13 +0900
+Processing by ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KAa8NYh7aipI6Gcmj+zGhmMihNALGz8i1Uq0ICNZPBwYn//ZWGrusHUddmSHLOjqrPQrVqTr5fLuKK+lH/yFGw==", "product"=>{"name"=>"サッカーボール", "price"=>"900", "quantity"=>"20"}, "commit"=>"登録する", "id"=>"1"}
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "products" SET "price" = ?, "updated_at" = ? WHERE "products"."id" = ?[0m  [["price", 900], ["updated_at", 2017-04-08 11:25:13 +0900], ["id", 1]]
+  [1m[35m (77.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/products/1
+Completed 302 Found in 90ms (ActiveRecord: 79.7ms)
+
+
+Started GET "/products/1" for ::1 at 2017-04-08 11:25:13 +0900
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 179ms (Views: 115.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/products" for ::1 at 2017-04-08 11:25:19 +0900
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 158ms (Views: 122.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/1/edit" for ::1 at 2017-04-08 11:25:45 +0900
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (1.0ms)
+  Rendered products/edit.html.erb within layouts/application (27.1ms)
+Completed 200 OK in 182ms (Views: 153.4ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/products/1" for ::1 at 2017-04-08 11:25:50 +0900
+Processing by ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tiBC0W0VQD/G89j0EI/C5qirEN8n8R3JyBB4kwoWrY6GuQE9vQTEpfsGybYYT+yKZ32/WYgBxxnzcmMWNrMUiQ==", "product"=>{"name"=>"サッカーボール", "price"=>"1000", "quantity"=>"20"}, "commit"=>"登録する", "id"=>"1"}
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "products" SET "price" = ?, "updated_at" = ? WHERE "products"."id" = ?[0m  [["price", 1000], ["updated_at", 2017-04-08 11:25:50 +0900], ["id", 1]]
+  [1m[35m (133.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/products/1
+Completed 302 Found in 143ms (ActiveRecord: 134.4ms)
+
+
+Started GET "/products/1" for ::1 at 2017-04-08 11:25:50 +0900
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 169ms (Views: 134.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for ::1 at 2017-04-08 11:26:06 +0900
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 228ms (Views: 175.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/products/1/edit" for ::1 at 2017-04-08 11:26:07 +0900
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (1.0ms)
+  Rendered products/edit.html.erb within layouts/application (27.1ms)
+Completed 200 OK in 185ms (Views: 155.0ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/products/1" for ::1 at 2017-04-08 11:26:11 +0900
+Processing by ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nPPu9okjDC33Q+G6wMDcUtC3eaejNUAhZwvXXX3Q6jGsaq0aWTKIt8q28PjIAPI+H2HWIQzFmvFcaczYQXVTNg==", "product"=>{"name"=>"サッカーボール", "price"=>"100", "quantity"=>"20"}, "commit"=>"登録する", "id"=>"1"}
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[33mUPDATE "products" SET "price" = ?, "updated_at" = ? WHERE "products"."id" = ?[0m  [["price", 100], ["updated_at", 2017-04-08 11:26:11 +0900], ["id", 1]]
+  [1m[35m (114.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/products/1
+Completed 302 Found in 130ms (ActiveRecord: 116.7ms)
+
+
+Started GET "/products/1" for ::1 at 2017-04-08 11:26:11 +0900
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 336ms (Views: 301.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/products" for ::1 at 2017-04-08 11:26:14 +0900
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (41.1ms)
+Completed 200 OK in 450ms (Views: 400.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/1/edit" for ::1 at 2017-04-08 11:26:15 +0900
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (1.0ms)
+  Rendered products/edit.html.erb within layouts/application (27.7ms)
+Completed 200 OK in 178ms (Views: 147.4ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/products/1" for ::1 at 2017-04-08 11:26:20 +0900
+Processing by ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fexTXhKbb0EkLXd7aTk4FJujMavaNTkLdUUt9nZ2eaJNdRCyworr2xnYZjlh+RZ4VHWeLXXF49tOJzZzStPApQ==", "product"=>{"name"=>"サッカーボール", "price"=>"1000", "quantity"=>"20"}, "commit"=>"登録する", "id"=>"1"}
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "products" SET "price" = ?, "updated_at" = ? WHERE "products"."id" = ?[0m  [["price", 1000], ["updated_at", 2017-04-08 11:26:20 +0900], ["id", 1]]
+  [1m[35m (92.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/products/1
+Completed 302 Found in 100ms (ActiveRecord: 93.2ms)
+
+
+Started GET "/products/1" for ::1 at 2017-04-08 11:26:20 +0900
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 224ms (Views: 178.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for ::1 at 2017-04-08 11:26:22 +0900
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 153ms (Views: 124.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/products" for ::1 at 2017-04-08 11:30:00 +0900
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 275ms (Views: 222.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/products/1/edit" for ::1 at 2017-04-08 11:30:01 +0900
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (1.0ms)
+  Rendered products/edit.html.erb within layouts/application (28.1ms)
+Completed 200 OK in 185ms (Views: 156.4ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/products/1" for ::1 at 2017-04-08 11:30:04 +0900
+Processing by ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5epm/ccgcnyMI1yZ6+kq55WY/JglTB+8Dy83SyU/vu/VcyURFzH25rHWTdvjKQSLWk5THoq8xWw0TSzOGZoH6A==", "product"=>{"name"=>"サッカーボール", "price"=>"100", "quantity"=>"20"}, "commit"=>"登録する", "id"=>"1"}
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "products" SET "price" = ?, "updated_at" = ? WHERE "products"."id" = ?[0m  [["price", 100], ["updated_at", 2017-04-08 11:30:04 +0900], ["id", 1]]
+  [1m[35m (80.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/products/1
+Completed 302 Found in 187ms (ActiveRecord: 81.2ms)
+
+
+Started GET "/products/1" for ::1 at 2017-04-08 11:30:05 +0900
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 209ms (Views: 130.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for ::1 at 2017-04-08 11:30:09 +0900
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 429ms (Views: 385.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/products/1" for ::1 at 2017-04-08 11:30:11 +0900
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 172ms (Views: 123.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for ::1 at 2017-04-08 11:34:31 +0900
+  
+SyntaxError (C:/Users/mino/Documents/Project/stocker/app/controllers/products_controller.rb:33: syntax error, unexpected ']'
+      flash[success:] = "更新しました。"
+                     ^):
+  
+app/controllers/products_controller.rb:33: syntax error, unexpected ']'
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+Started GET "/products/1/edit" for ::1 at 2017-04-08 11:34:32 +0900
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.0ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1690.5ms)
+  
+SyntaxError (C:/Users/mino/Documents/Project/stocker/app/controllers/products_controller.rb:33: syntax error, unexpected ']'
+      flash[success:] = "更新しました。"
+                     ^):
+  
+app/controllers/products_controller.rb:33: syntax error, unexpected ']'
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.0ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1611.3ms)
+Started GET "/products" for ::1 at 2017-04-08 11:34:44 +0900
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 218ms (Views: 168.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/products" for ::1 at 2017-04-08 11:38:40 +0900
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 287ms (Views: 227.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/products/1/edit" for ::1 at 2017-04-08 11:38:42 +0900
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (1.0ms)
+  Rendered products/edit.html.erb within layouts/application (27.3ms)
+Completed 200 OK in 323ms (Views: 261.5ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/products/1" for ::1 at 2017-04-08 11:38:45 +0900
+Processing by ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MNQDwF5ng2Z9uM5Ilb4taERjS5VbeVNckfcOR0M13vIATUAsjnYH/EBN3wqdfgMEi7XkE/SJiYyqlRXCf5Bn9Q==", "product"=>{"name"=>"サッカーボール", "price"=>"1000", "quantity"=>"20"}, "commit"=>"登録する", "id"=>"1"}
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "products" SET "price" = ?, "updated_at" = ? WHERE "products"."id" = ?[0m  [["price", 1000], ["updated_at", 2017-04-08 11:38:46 +0900], ["id", 1]]
+  [1m[35m (134.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/products/1
+Completed 302 Found in 147ms (ActiveRecord: 135.1ms)
+
+
+Started GET "/products/1" for ::1 at 2017-04-08 11:38:46 +0900
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 161ms (Views: 125.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/1" for ::1 at 2017-04-08 11:39:01 +0900
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 226ms (Views: 189.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/products" for ::1 at 2017-04-08 11:39:03 +0900
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 182ms (Views: 155.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/1/edit" for ::1 at 2017-04-08 11:39:05 +0900
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (1.0ms)
+  Rendered products/edit.html.erb within layouts/application (88.9ms)
+Completed 200 OK in 313ms (Views: 283.2ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/products/1" for ::1 at 2017-04-08 11:39:09 +0900
+Processing by ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZuthJbTM+4WabHukv1HOozr/69taUq7L2MjvwSTSG+hWciLJZN1/H6eZaua3keDP9SlEXfWidBvjqvREGHei7w==", "product"=>{"name"=>"サッカーボール", "price"=>"100", "quantity"=>"20"}, "commit"=>"登録する", "id"=>"1"}
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "products" SET "price" = ?, "updated_at" = ? WHERE "products"."id" = ?[0m  [["price", 100], ["updated_at", 2017-04-08 11:39:09 +0900], ["id", 1]]
+  [1m[35m (118.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/products/1
+Completed 302 Found in 170ms (ActiveRecord: 119.3ms)
+
+
+Started GET "/products/1" for ::1 at 2017-04-08 11:39:09 +0900
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 517ms (Views: 455.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for ::1 at 2017-04-08 11:39:15 +0900
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 178ms (Views: 148.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for ::1 at 2017-04-08 11:40:38 +0900
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 179ms (Views: 135.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/1" for ::1 at 2017-04-08 11:40:40 +0900
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 147ms (Views: 119.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/products/new" for ::1 at 2017-04-08 11:40:45 +0900
+Processing by ProductsController#new as HTML
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (2.0ms)
+  Rendered products/new.html.erb within layouts/application (53.1ms)
+Completed 200 OK in 237ms (Views: 200.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products" for ::1 at 2017-04-08 11:40:58 +0900
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pIIxSZiO73MbnG0uGMDB3hc3cRS2PslNjxsHpbxCbl7NzA/abV3O3Zw3b5a/gBO+dVxKVIjqox9ZNAUnJ1VfiA==", "product"=>{"name"=>"カード", "price"=>"150", "quantity"=>"100"}, "commit"=>"登録する"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "quantity", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "カード"], ["price", 150], ["quantity", 100], ["created_at", 2017-04-08 11:40:58 +0900], ["updated_at", 2017-04-08 11:40:58 +0900]]
+  [1m[35m (130.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/products/4
+Completed 302 Found in 149ms (ActiveRecord: 131.4ms)
+
+
+Started GET "/products/4" for ::1 at 2017-04-08 11:40:58 +0900
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 159ms (Views: 128.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for ::1 at 2017-04-08 11:41:12 +0900
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 170ms (Views: 139.7ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/products/4" for ::1 at 2017-04-08 11:41:15 +0900
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for ProductsController):
+  
+actionpack (5.0.2) lib/abstract_controller/base.rb:121:in `process'
+actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.2) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (1.0ms)
+Started GET "/products/new" for ::1 at 2017-04-08 11:41:27 +0900
+Processing by ProductsController#new as HTML
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (1.0ms)
+  Rendered products/new.html.erb within layouts/application (27.9ms)
+Completed 200 OK in 176ms (Views: 146.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products" for ::1 at 2017-04-08 11:41:44 +0900
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mS2mN/uIYc9K2KK8LdKSBqwZFZrpm5podOXAHyl/3cTwY5ikDltAYc1zoASKkkBmznIu2tdP8DqiysKdsmjsEg==", "product"=>{"name"=>"おもちゃ", "price"=>"500", "quantity"=>"150"}, "commit"=>"登録する"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (15.0ms)[0m  [1m[32mINSERT INTO "products" ("name", "price", "quantity", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "おもちゃ"], ["price", 500], ["quantity", 150], ["created_at", 2017-04-08 11:41:44 +0900], ["updated_at", 2017-04-08 11:41:44 +0900]]
+  [1m[35m (172.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/products/5
+Completed 302 Found in 284ms (ActiveRecord: 187.2ms)
+
+
+Started GET "/products/5" for ::1 at 2017-04-08 11:41:44 +0900
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 152ms (Views: 122.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for ::1 at 2017-04-08 11:41:46 +0900
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 244ms (Views: 195.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for ::1 at 2017-04-08 11:44:14 +0900
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 160ms (Views: 126.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/1/edit" for ::1 at 2017-04-08 11:44:19 +0900
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (1.0ms)
+  Rendered products/edit.html.erb within layouts/application (28.1ms)
+Completed 200 OK in 207ms (Views: 168.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/1/edit" for ::1 at 2017-04-08 11:46:00 +0900
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (1.0ms)
+  Rendered products/edit.html.erb within layouts/application (27.3ms)
+Completed 200 OK in 173ms (Views: 147.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/new" for ::1 at 2017-04-08 11:46:05 +0900
+Processing by ProductsController#new as HTML
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (2.0ms)
+  Rendered products/new.html.erb within layouts/application (34.7ms)
+Completed 200 OK in 179ms (Views: 152.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for ::1 at 2017-04-08 11:49:04 +0900
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 199ms (Views: 159.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/products/1" for ::1 at 2017-04-08 11:49:05 +0900
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 148ms (Views: 118.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/1/edit" for ::1 at 2017-04-08 11:49:09 +0900
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (2.0ms)
+  Rendered products/edit.html.erb within layouts/application (39.1ms)
+Completed 200 OK in 243ms (Views: 206.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/1/edit" for ::1 at 2017-04-08 11:49:43 +0900
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (3.0ms)
+  Rendered products/edit.html.erb within layouts/application (58.2ms)
+Completed 200 OK in 295ms (Views: 248.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/1/edit" for ::1 at 2017-04-08 11:51:05 +0900
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (2.0ms)
+  Rendered products/edit.html.erb within layouts/application (28.8ms)
+Completed 200 OK in 187ms (Views: 156.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/1/edit" for ::1 at 2017-04-08 11:51:17 +0900
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (1.0ms)
+  Rendered products/edit.html.erb within layouts/application (28.8ms)
+Completed 200 OK in 184ms (Views: 150.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for ::1 at 2017-04-08 11:51:20 +0900
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 179ms (Views: 147.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for ::1 at 2017-04-08 11:52:14 +0900
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 174ms (Views: 142.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/1/edit" for ::1 at 2017-04-08 11:52:15 +0900
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (1.0ms)
+  Rendered products/edit.html.erb within layouts/application (33.1ms)
+Completed 500 Internal Server Error in 142ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (C:/Users/mino/Documents/Project/stocker/app/views/products/_form.html.erb:21: syntax error, unexpected '<', expecting keyword_end
+   <% end 
+    ^
+C:/Users/mino/Documents/Project/stocker/app/views/products/_form.html.erb:28: syntax error, unexpected keyword_ensure, expecting keyword_end
+C:/Users/mino/Documents/Project/stocker/app/views/products/_form.html.erb:30: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/products/_form.html.erb:21: syntax error, unexpected '<', expecting keyword_end
+app/views/products/_form.html.erb:28: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/products/_form.html.erb:30: syntax error, unexpected end-of-input, expecting keyword_end
+app/views/products/edit.html.erb:2:in `_app_views_products_edit_html_erb__881396040_84347964'
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (2176.8ms)
+Started GET "/products/1/edit" for ::1 at 2017-04-08 11:53:05 +0900
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (2.0ms)
+  Rendered products/edit.html.erb within layouts/application (28.6ms)
+Completed 200 OK in 187ms (Views: 157.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for ::1 at 2017-04-08 11:53:08 +0900
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 324ms (Views: 287.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/new" for ::1 at 2017-04-08 11:53:09 +0900
+Processing by ProductsController#new as HTML
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (1.0ms)
+  Rendered products/new.html.erb within layouts/application (66.2ms)
+Completed 200 OK in 453ms (Views: 393.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/1/edit" for ::1 at 2017-04-08 11:53:22 +0900
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (2.0ms)
+  Rendered products/edit.html.erb within layouts/application (27.1ms)
+Completed 200 OK in 179ms (Views: 147.8ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/products/1" for ::1 at 2017-04-08 11:53:26 +0900
+Processing by ProductsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KKz91TgTm7G1DxAMbyJ4G8AtI7iBFAKNbvZe7ls9giUYNb456AIfK4j6AU5n4lZ3D/uMPi7k2F1VlEVrZ5g7Ig==", "product"=>{"name"=>"サッカーボール", "price"=>"1000", "quantity"=>"20"}, "commit"=>"更新する", "id"=>"1"}
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "products" SET "price" = ?, "updated_at" = ? WHERE "products"."id" = ?[0m  [["price", 1000], ["updated_at", 2017-04-08 11:53:26 +0900], ["id", 1]]
+  [1m[35m (115.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/products/1
+Completed 302 Found in 151ms (ActiveRecord: 118.3ms)
+
+
+Started GET "/products/1" for ::1 at 2017-04-08 11:53:26 +0900
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 226ms (Views: 176.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for ::1 at 2017-04-08 11:53:29 +0900
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 237ms (Views: 176.7ms | ActiveRecord: 0.0ms)
+
+
