@@ -10,7 +10,7 @@
      <td><%= product.quantity %></td>
      <td><%= link_to "確認", product %></td>
      <td><%= link_to "編集", edit_product_path(product) %></td>
-     <td><%= link_to "削除", product, method: :delete,
+     <td><%= link_to "削除", product, method: 'DELETE',
      data: { confirm: '本当に削除しますか？'} %></td>
     </tr>
   <% end %>
