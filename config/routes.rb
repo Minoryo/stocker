@@ -1,12 +1,5 @@
 Rails.application.routes.draw do
-  get 'products/index'
+  root 'static_pages#home'
 
-  get 'products/show'
-
-  get 'products/new'
-
-  get 'products/regist'
-
-  root 'products#index'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :products
 end
